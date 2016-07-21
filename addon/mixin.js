@@ -1,10 +1,10 @@
 import Ember from 'ember';
 import Errors from 'ember-validations/errors';
 import Base from 'ember-validations/validators/base';
-import getOwner from 'ember-getowner-polyfill';
 
 var get = Ember.get;
 var set = Ember.set;
+var getOwner = Ember.getOwner;
 
 var setValidityMixin = Ember.Mixin.create({
   isValid: Ember.computed('validators.@each.isValid', function() {
